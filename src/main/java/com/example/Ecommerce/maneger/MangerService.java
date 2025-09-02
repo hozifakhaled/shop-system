@@ -41,6 +41,7 @@ public class MangerService {
         mangerRepo.deleteById(id).orElseThrow(
                 () -> new RuntimeException("Manger not found with id: " + id)
         );
+
         return "Manger deleted successfully";
     }
 }
