@@ -19,4 +19,7 @@ public class MangerEntity {
     @Column(unique = true, nullable = false)
     private String phone;
 
+    @OneToOne
+    @JoinColumn(name = "shop_id")
+    private  shopEntity shop;
 }
