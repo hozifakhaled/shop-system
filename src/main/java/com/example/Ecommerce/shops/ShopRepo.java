@@ -3,9 +3,11 @@ package com.example.Ecommerce.shops;
 import com.example.Ecommerce.maneger.MangerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ShopRepo extends JpaRepository<shopEntity, Integer> {
-    shopEntity findById(int id);
+import java.util.Optional;
 
-    shopEntity deleteById(int id);
+public interface ShopRepo extends JpaRepository<shopEntity, Integer> {
+   Optional <shopEntity> findById(int id);
+
+    Optional  <shopEntity> deleteById(int id);
 
 }

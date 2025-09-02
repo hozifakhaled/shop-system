@@ -18,7 +18,9 @@ public class ShopService {
     }
 
     public shopEntity getShopById(int id) {
-        return shopRepe.findById(id)
+        return shopRepe.findById(id).orElseThrow(
+                () -> new RuntimeException("Shop not found")
+        )
                 ;
     }
 

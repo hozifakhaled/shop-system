@@ -2,8 +2,10 @@ package com.example.Ecommerce.maneger;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface MangerRepo  extends JpaRepository<MangerEntity, Integer> {
-    MangerEntity findById(int id);
+import java.util.Optional;
 
-    MangerEntity deleteById(int id);
+public interface MangerRepo  extends JpaRepository<MangerEntity, Integer> {
+ Optional <MangerEntity> findById(int id);
+
+    Optional <   MangerEntity> deleteById(int id);
 }
