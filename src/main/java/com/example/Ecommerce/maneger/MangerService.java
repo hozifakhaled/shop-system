@@ -15,7 +15,7 @@ public class MangerService {
 
     public MangerEntity addManger(MangerDto mangerDto) {
 
-        shopEntity shop = shopRepo.findById((int) mangerDto.getShopDto().getId()).orElseThrow(
+        shopEntity shop = shopRepo.findById((int) mangerDto.getShop().getId()).orElseThrow(
                 () -> new RuntimeException("Shop not found")
         );
 

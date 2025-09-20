@@ -1,5 +1,6 @@
-package com.example.Ecommerce.maneger;
+package com.example.Ecommerce.employees;
 
+import com.example.Ecommerce.maneger.MangerDto;
 import com.example.Ecommerce.shops.ShopDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,9 +9,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MangerDto {
+
+public class EmpleyooDto {
     private int id;
     private String name;
-    private String phone;
-    private ShopDto shop;
+    private int salary;
+    private MangerDto manger;
 }

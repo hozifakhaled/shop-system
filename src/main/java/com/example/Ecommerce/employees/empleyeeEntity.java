@@ -1,6 +1,7 @@
 package com.example.Ecommerce.employees;
 
 
+import com.example.Ecommerce.maneger.MangerEntity;
 import com.example.Ecommerce.shops.shopEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,7 +19,8 @@ public class empleyeeEntity {
     private String name;
     private int salary;
 
+
     @ManyToOne
-    @JoinColumn(name = "emplyee_id", referencedColumnName = "id")
-    private shopEntity shopEntity;
+    @JoinColumn(name = "manger_id", referencedColumnName = "id")
+    private MangerEntity manger;
 }
